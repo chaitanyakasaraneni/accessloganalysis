@@ -8,7 +8,7 @@ Creating a Spark application that will process a web server’s access log to co
  
  
 ### Instructions:
- 	You need the following pre-installed in your system to work on this.
+ You need the following pre-installed in your system to work on this.
  - Java 8 (as the latest versions are not supported by Apache Spark)
  - Python
  - Scala
