@@ -1,5 +1,4 @@
 # CMPE 256 - Large Scale Analytics Programming assignment-2
-# Submitted by Chaitanya Krishna Kasaraneni (ID 013772642)
 
 # Aim : To find the number of jpgs, gifs and total number of requests in a given access_log file using PySpark.
 
