@@ -1,0 +1,3 @@
+Number of Image requests (all JPG, JPEG and PNG included):3083143
+Number of GIFs:73787
+Number of other requests:1320913
