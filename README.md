@@ -18,6 +18,7 @@ Creating a Spark application that will process a web server’s access log to co
 There are various ways out there which you can follow to install apache spark on your system. Some examples are:
 - [Ubuntu](https://medium.com/@josemarcialportilla/installing-scala-and-spark-on-ubuntu-5665ee4b62b1)
 - [Windows](https://medium.com/@dvainrub/how-to-install-apache-spark-2-x-in-your-pc-e2047246ffc3)
+- You can install Spark on your machine or use the online platform such as [MatrixDS](https://matrixds.com/) to run your code so that Spark setup is minimal.
 
 ### My approach:
 I used the regular expressions to find the number of '.jpg's, '.gifs' and the subtracted the count of '.jpg's, '.gifs' from the total number of requests.
