@@ -34,8 +34,11 @@ I used the regular expressions to find the number of '.jpg's, '.gifs' and the su
       gif = lines.flatMap(lambda l: re.findall(r'(?i:gif)',l))
       ```
  - For finding the number of other requests I just counted the total number of requests and subtracted the number of JPG requests and GIF requests from total requests.
-     
-
+     ```
+    rem_files = base_df.select(regexp_extract('value', r'^.*"\w+\s+([^\s]+)\s+HTTP.*', 1).alias('path'))
+    print("\nNumber of other requests:%d" % (rem_files.count() - (jpg_out[0] + jpg_out[1]) - gif_out[0]))
+    i_str = str(rem_files.count() - (jpg_out[0] + jpg_out[1]) - gif_out[0])
+     ```
 ### Usage:
 ```
 python(3) filetypecount.py <filename>
