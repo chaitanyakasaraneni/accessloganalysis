@@ -23,11 +23,18 @@ There are various ways out there which you can follow to install apache spark on
 ### My approach:
 I used the regular expressions to find the number of '.jpg's, '.gifs' and the subtracted the count of '.jpg's, '.gifs' from the total number of requests.
  - For finding number of JPGs:
-  		Here I considered all the image file requests (jpg, jpeg and png) into JPG requests and counted the number. 
-    The regular expression '?i:jpg|jpeg|png' gives the count of total image requests. The 'i' in regular expression is for ignoring the cases i.e jpg and JPG are treated as single extension.here were some _jpg and 7jpg requests as well. This program considers those requests as well.
+  		- Here I considered all the image file requests (jpg, jpeg and png) into JPG requests and counted the number. 
+    The regular expression '?i:jpg|jpeg|png' gives the count of total image requests. The 'i' in regular expression is for ignoring the cases i.e jpg and JPG are treated as single extension. There were some _jpg and 7jpg requests as well. This program considers those requests too.
+    ```
+    jpg = lines.flatMap(lambda l: re.findall(r'(?i:jpg|jpeg|png)',l))
+    ```
  - For finding number of GIFs:
     		- The regular expression '?i:gif' gives the count of total GIF requests. (gif and Gif included)
+      ```
+      gif = lines.flatMap(lambda l: re.findall(r'(?i:gif)',l))
+      ```
  - For finding the number of other requests I just counted the total number of requests and subtracted the number of JPG requests and GIF requests from total requests.
+     
 
 ### Usage:
 ```
