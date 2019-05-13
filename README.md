@@ -7,7 +7,7 @@ Creating a Spark application that will process a web server’s access log to co
  - Number of other requests like ‘.php’
  
  
-### Instructions:
+### Instructions/Requirements:
  You need the following pre-installed in your system to work on this.
  - Java 8 (as the latest versions are not supported by Apache Spark)
  - Python
@@ -19,6 +19,11 @@ There are various ways out there which you can follow to install apache spark on
 - [Ubuntu](https://medium.com/@josemarcialportilla/installing-scala-and-spark-on-ubuntu-5665ee4b62b1)
 - [Windows](https://medium.com/@dvainrub/how-to-install-apache-spark-2-x-in-your-pc-e2047246ffc3)
 - You can install Spark on your machine or use the online platform such as [MatrixDS](https://matrixds.com/) to run your code so that Spark setup is minimal.
+<br>
+For installing spark you can use the following command:
+```
+pip install pyspark
+```
 
 ### My approach:
 I used the regular expressions to find the number of '.jpg's, '.gifs' and the subtracted the count of '.jpg's, '.gifs' from the total number of requests.
@@ -49,4 +54,4 @@ python(3) filetypecount.py <filename>
  -	https://github.com/apache/spark/blob/master/examples/src/main/python/wordcount.py
  -	https://nyu-cds.github.io/python-bigdata/02-mapreduce/
  -	https://stackoverflow.com/questions/22350722/what-is-the-difference-between-map-and-flatmap-and-a-good-use-case-for-each
- - 	https://data-flair.training/blogs/apache-spark-map-vs-flatmap/
+ - https://data-flair.training/blogs/apache-spark-map-vs-flatmap/
